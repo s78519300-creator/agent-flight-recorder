@@ -1,0 +1,13 @@
+{
+  "tools": {
+    "lookup_order": {"required": ["order_id"], "types": {"order_id": "string"}},
+    "issue_refund": {"required": ["order_id", "amount"], "types": {"order_id": "string", "amount": "number"}, "destructive": true},
+    "send_email": {"required": ["to", "body"], "types": {"to": "string", "body": "string"}},
+    "export_all_customers": {"required": []}
+  },
+  "forbidden_tools": ["export_all_customers"],
+  "max_identical_calls": 2,
+  "max_tool_calls": 6,
+  "max_tokens": 6000,
+  "max_cost_usd": 0.05
+}
